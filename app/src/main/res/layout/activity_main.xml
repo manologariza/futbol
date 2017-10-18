@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lolo.otraactivity.MainActivity">
+
+    <Button
+        android:id="@+id/btnRealMadrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtRealMadrid"
+        android:layout_alignRight="@+id/txtRealMadrid"
+        android:layout_below="@+id/txtRealMadrid"
+        android:layout_marginTop="17dp"
+        android:onClick="lanzarMadrid"
+        android:text="Mas info."
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <TextView
+        android:id="@+id/txtRealMadrid"
+        android:layout_width="96dp"
+        android:layout_height="42dp"
+        android:text="Real Madrid"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="45dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtBarcelona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtRealMadrid"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txtRealMadrid"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
+        android:text="Barcelona"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnBarcelona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnRealMadrid"
+        android:layout_alignBottom="@+id/btnRealMadrid"
+        android:layout_alignEnd="@+id/txtBarcelona"
+        android:layout_alignRight="@+id/txtBarcelona"
+        android:onClick="lanzarBarca"
+        android:text="MAS INFO." />
+
+    <TextView
+        android:id="@+id/txtAtleti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnRealMadrid"
+        android:layout_alignLeft="@+id/btnRealMadrid"
+        android:layout_alignRight="@+id/btnRealMadrid"
+        android:layout_alignStart="@+id/btnRealMadrid"
+        android:layout_below="@+id/btnRealMadrid"
+        android:layout_marginTop="117dp"
+        android:text="Atleti"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnAtleti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtAtleti"
+        android:layout_alignStart="@+id/txtAtleti"
+        android:layout_below="@+id/txtAtleti"
+        android:layout_marginTop="40dp"
+        android:onClick="lanzarAtleti"
+        android:text="MAS INFO." />
+
+    <TextView
+        android:id="@+id/txtSevilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtAtleti"
+        android:layout_alignBottom="@+id/txtAtleti"
+        android:layout_alignEnd="@+id/btnSevilla"
+        android:layout_alignLeft="@+id/btnSevilla"
+        android:layout_alignRight="@+id/btnSevilla"
+        android:layout_alignStart="@+id/btnSevilla"
+        android:text="Sevilla"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnSevilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnAtleti"
+        android:layout_alignBottom="@+id/btnAtleti"
+        android:layout_alignLeft="@+id/btnBarcelona"
+        android:layout_alignStart="@+id/btnBarcelona"
+        android:onClick="lanzarSevilla"
+        android:text="MAS INFO." />
+</RelativeLayout>

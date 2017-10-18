@@ -4,11 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     ArrayList listaEquipos;
     Equipos e1;
@@ -16,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
     Equipos e3;
     Equipos e4;
 
+    Button btnRealMadrid;
+    Button btnBarcelona;
+    Button btnAtleti;
+    Button btnSevilla;
 
 
 
@@ -26,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("EQUIPOS");
+
+        btnRealMadrid=(Button)findViewById(R.id.btnRealMadrid);
+        btnBarcelona=(Button)findViewById(R.id.btnBarcelona);
+        btnAtleti=(Button)findViewById(R.id.btnAtleti);
+        btnSevilla=(Button)findViewById(R.id.btnSevilla);
 
         listaEquipos= new ArrayList();
 
@@ -38,12 +48,25 @@ public class MainActivity extends AppCompatActivity {
         listaEquipos.add(e2);
         listaEquipos.add(e3);
         listaEquipos.add(e4);
+
+
+        btnRealMadrid.setOnClickListener(this);
+        btnBarcelona.setOnClickListener(this);
+        btnAtleti.setOnClickListener(this);
+        btnSevilla.setOnClickListener(this);
+
+
+
     }
 
     /*public void leerInfo(View v){ //metodo para que cuando pulse el boton mas info redireccione al activity Informacion
         Intent i=new Intent(this,Informacion.class);
         this.startActivity(i);
     }*/
+
+
+
+
 
     //INTENTS PARA LANZAR ACTIVITY
     public void lanzarMadrid(View view){
@@ -71,6 +94,14 @@ public class MainActivity extends AppCompatActivity {
         Intent iBa=new Intent(this,Informacion.class);
         iBa.putExtra("equipo","ba");
         this.startActivity(iBa);
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        int id=view.getId();
+        if(id==R.id.btnRealMadrid)
+
 
     }
 }

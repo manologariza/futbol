@@ -44,17 +44,11 @@ public class Informacion extends AppCompatActivity {
         txtJugador = (TextView) findViewById(R.id.txtJugador);
         imagenJugador = (ImageView) findViewById(R.id.imagenJugador);
 
-        listaEquipos= new ArrayList();
-
         e1=new Equipos("REAL MADRID","EL MEJOR CLUB DE LA HISTORIA","JUGADOR ESTRELLA: CR7","EL MEJOR JUGADOR DE LA HISTORIA");
         e2=new Equipos("ATLETI","LAS MISMAS CHAMPIONS QUE EL TOMELLOSO","JUGADOR ESTRELLA: GRIEZMANN","EL UNICO QUE SE SALVA");
         e3=new Equipos("SEVILLA","POR PONER ALGUNO","JUGADOR ESTRELLA: BEN YEDDER","ES LO QUE HAY...");
         e4=new Equipos("FARSA","COMPRAN ARBITROS","JUGADOR ESTRELLA: MESSI","SIEMPRE POR DEBAJO DE CR7");
 
-        listaEquipos.add(e1);
-        listaEquipos.add(e2);
-        listaEquipos.add(e3);
-        listaEquipos.add(e4);
 
 
         String equipo;

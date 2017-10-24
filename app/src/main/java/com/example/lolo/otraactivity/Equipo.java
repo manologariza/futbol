@@ -6,14 +6,14 @@ import java.io.Serializable;
  * Created by Lolo on 16/10/2017.
  */
 
-public class Equipos {
+public class Equipo {
 
     private String nombreEquipo;
     private String descripcionEquipo;
     private String nombreJugador;
     private String descripcionJugador;
 
-    public Equipos(String n,String d,String no,String de){
+    public Equipo(String n, String d, String no, String de){
         this.nombreEquipo=n;
         this.descripcionEquipo=d;
         this.nombreJugador=no;

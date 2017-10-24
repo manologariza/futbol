@@ -1,14 +1,10 @@
 package com.example.lolo.otraactivity;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -22,13 +18,10 @@ public class Informacion extends AppCompatActivity {
     private TextView txtJugador;
     private ImageView imagenJugador;
     private Button btnPulsado;
-    ArrayList listaEquipos;
-    Equipos e1;
-    Equipos e2;
-    Equipos e3;
-    Equipos e4;
-
-
+    Equipo e1;
+    Equipo e2;
+    Equipo e3;
+    Equipo e4;
 
 
     @Override
@@ -44,21 +37,18 @@ public class Informacion extends AppCompatActivity {
         txtJugador = (TextView) findViewById(R.id.txtJugador);
         imagenJugador = (ImageView) findViewById(R.id.imagenJugador);
 
-        e1=new Equipos("REAL MADRID","EL MEJOR CLUB DE LA HISTORIA","JUGADOR ESTRELLA: CR7","EL MEJOR JUGADOR DE LA HISTORIA");
-        e2=new Equipos("ATLETI","LAS MISMAS CHAMPIONS QUE EL TOMELLOSO","JUGADOR ESTRELLA: GRIEZMANN","EL UNICO QUE SE SALVA");
-        e3=new Equipos("SEVILLA","POR PONER ALGUNO","JUGADOR ESTRELLA: BEN YEDDER","ES LO QUE HAY...");
-        e4=new Equipos("FARSA","COMPRAN ARBITROS","JUGADOR ESTRELLA: MESSI","SIEMPRE POR DEBAJO DE CR7");
-
-
+        e1=new Equipo("REAL MADRID","EL MEJOR CLUB DE LA HISTORIA","JUGADOR ESTRELLA: CR7","EL MEJOR JUGADOR DE LA HISTORIA");
+        e2=new Equipo("ATLETI","LAS MISMAS CHAMPIONS QUE EL TOMELLOSO","JUGADOR ESTRELLA: GRIEZMANN","EL UNICO QUE SE SALVA");
+        e3=new Equipo("SEVILLA","POR PONER ALGUNO","JUGADOR ESTRELLA: BEN YEDDER","ES LO QUE HAY...");
+        e4=new Equipo("FARSA","COMPRAN ARBITROS","JUGADOR ESTRELLA: MESSI","SIEMPRE POR DEBAJO DE CR7");
 
         String equipo;
 
         Bundle b=getIntent().getExtras();
-        equipo=b.getString("equipo");
-
+        equipo=b.getString("equipoSeleccionado");
 
         switch (equipo){
-            case "rm":
+            case "REAL MADRID":
                 lblEquipo.setText(e1.getNombreEquipo());
                 txtEquipo.setText(e1.getDescripcionEquipo());
                 lblJugador.setText(e1.getNombreJugador());
@@ -67,7 +57,7 @@ public class Informacion extends AppCompatActivity {
                 imagenJugador.setImageResource(R.drawable.cris);
                 break;
 
-            case "at":
+            case "ATLETI":
                 lblEquipo.setText(e2.getNombreEquipo());
                 txtEquipo.setText(e2.getDescripcionEquipo());
                 lblJugador.setText(e2.getNombreJugador());
@@ -76,7 +66,7 @@ public class Informacion extends AppCompatActivity {
                 imagenJugador.setImageResource(R.drawable.griezmann);
                 break;
 
-            case "se":
+            case "SEVILLA":
                 lblEquipo.setText(e3.getNombreEquipo());
                 txtEquipo.setText(e3.getDescripcionEquipo());
                 lblJugador.setText(e3.getNombreJugador());
@@ -85,7 +75,7 @@ public class Informacion extends AppCompatActivity {
                 imagenJugador.setImageResource(R.drawable.ben);
                 break;
 
-            case "ba":
+            case "FARSA":
                 lblEquipo.setText(e4.getNombreEquipo());
                 txtEquipo.setText(e4.getDescripcionEquipo());
                 lblJugador.setText(e4.getNombreJugador());

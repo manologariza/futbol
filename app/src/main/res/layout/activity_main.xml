@@ -14,7 +14,6 @@
         android:layout_alignRight="@+id/txtRealMadrid"
         android:layout_below="@+id/txtRealMadrid"
         android:layout_marginTop="17dp"
-        android:onClick="lanzarMadrid"
         android:text="Mas info."
         tools:layout_editor_absoluteX="37dp"
         tools:layout_editor_absoluteY="87dp" />
@@ -56,7 +55,6 @@
         android:layout_alignBottom="@+id/btnRealMadrid"
         android:layout_alignEnd="@+id/txtBarcelona"
         android:layout_alignRight="@+id/txtBarcelona"
-        android:onClick="lanzarBarca"
         android:text="MAS INFO." />
 
     <TextView
@@ -81,7 +79,6 @@
         android:layout_alignStart="@+id/txtAtleti"
         android:layout_below="@+id/txtAtleti"
         android:layout_marginTop="40dp"
-        android:onClick="lanzarAtleti"
         android:text="MAS INFO." />
 
     <TextView
@@ -102,10 +99,9 @@
         android:id="@+id/btnSevilla"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="MAS INFO."
         android:layout_alignBaseline="@+id/btnAtleti"
         android:layout_alignBottom="@+id/btnAtleti"
         android:layout_alignLeft="@+id/btnBarcelona"
-        android:layout_alignStart="@+id/btnBarcelona"
-        android:onClick="lanzarSevilla"
-        android:text="MAS INFO." />
+        android:layout_alignStart="@+id/btnBarcelona" />
 </RelativeLayout>
